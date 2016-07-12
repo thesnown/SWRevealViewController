@@ -147,9 +147,7 @@
 // Enum values for setFrontViewPosition:animated:
 typedef NS_ENUM( NSInteger, FrontViewPosition)
 {
-    // Front controller is removed from view. Animated transitioning from this state will cause the same
-    // effect than animating from FrontViewPositionLeftSideMost. Use this instead of FrontViewPositionLeftSideMost when
-    // you want to remove the front view controller view from the view hierarchy.
+    /** Front controller is removed from view. Animated transitioning from this state will cause the same effect than animating from FrontViewPositionLeftSideMost. Use this instead of FrontViewPositionLeftSideMost when you want to remove the front view controller view from the view hierarchy. */
     FrontViewPositionLeftSideMostRemoved,
     
     // Left most position, front view is presented left-offseted by rightViewRevealWidth+rigthViewRevealOverdraw

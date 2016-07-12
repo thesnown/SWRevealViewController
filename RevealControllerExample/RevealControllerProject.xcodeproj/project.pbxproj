@@ -237,6 +237,11 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0630;
+				TargetAttributes = {
+					5E605BA414A081F900853025 = {
+						DevelopmentTeam = P8MVE54V3S;
+					};
+				};
 			};
 			buildConfigurationList = 5E605B9F14A081F900853025 /* Build configuration list for PBXProject "RevealControllerProject" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -404,10 +409,14 @@
 		5E605BC714A081F900853025 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "RevealControllerProject/Project-Prefix.pch";
 				INFOPLIST_FILE = "RevealControllerProject/RevealControllerProject-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = de.tsn.RevealControllerProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -415,10 +424,14 @@
 		5E605BC814A081F900853025 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "RevealControllerProject/Project-Prefix.pch";
 				INFOPLIST_FILE = "RevealControllerProject/RevealControllerProject-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = de.tsn.RevealControllerProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
