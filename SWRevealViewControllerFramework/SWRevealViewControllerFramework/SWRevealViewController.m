@@ -841,9 +841,29 @@ const int FrontViewPositionNone = 0xff;
 - (void)revealToggleAnimated:(BOOL)animated
 {
     FrontViewPosition toggledFrontViewPosition = FrontViewPositionLeft;
-    if (_frontViewPosition <= FrontViewPositionLeft)
-        toggledFrontViewPosition = FrontViewPositionRight;
-    
+    if (_frontViewPosition <= FrontViewPositionLeft){
+            toggledFrontViewPosition = FrontViewPositionRight;
+        
+            // copyed from https://github.com/NSRover/SWRevealViewController/commit/cd134d822be2895a7666a7ee33480300239d7a4f
+        
+            //Add overlay if requested
+            if (_shouldUseFrontViewOverlay) {
+                //Create
+                if (!_frontOverlayView) {
+                    self.frontOverlayView = [[UIView alloc] initWithFrame:self.frontViewController.view.bounds];
+                    _frontOverlayView.backgroundColor = [UIColor blackColor];
+                    _frontOverlayView.alpha = 0.5;
+                    UIButton * overlayButton = [[UIButton alloc] initWithFrame:_frontOverlayView.bounds];
+                    [overlayButton addTarget:self action:@selector(revealToggleAnimated:) forControlEvents:UIControlEventTouchUpInside];
+                    [_frontOverlayView addSubview:overlayButton];
+                    }
+                [self.frontViewController.view addSubview:_frontOverlayView];
+                }
+            }else{
+                if ([[_frontViewController.view subviews] containsObject:_frontOverlayView]) {
+                    [_frontOverlayView removeFromSuperview];
+                    }
+           }
     [self setFrontViewPosition:toggledFrontViewPosition animated:animated];
 }
 
