@@ -307,13 +307,6 @@ typedef NS_ENUM(NSInteger, SWRevealToggleAnimationType)
 // clipping your front view to this controller bounds.
 @property (nonatomic) BOOL extendsPointInsideHit;
 
-// copyed from https://github.com/NSRover/SWRevealViewController/commit/cd134d822be2895a7666a7ee33480300239d7a4f
-// An overlay view that is laid on top of the frontview when rearview is displayed.
-// It prevents the front view from accepting any touched when it is pushed to the side.
-@property (strong, nonatomic) UIView *frontOverlayView;
-@property (assign, nonatomic) BOOL shouldUseFrontViewOverlay;
-
-
 /* The class properly handles all the relevant calls to appearance methods on the contained controllers.
    Moreover you can assign a delegate to let the class inform you on positions and animation activity */
 
