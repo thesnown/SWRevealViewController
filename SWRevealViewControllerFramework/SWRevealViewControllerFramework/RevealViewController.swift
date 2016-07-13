@@ -8,21 +8,21 @@
 
 import UIKit
 
-class RevealViewController: SWRevealViewController, SWRevealViewControllerDelegate, UIGestureRecognizerDelegate {
+public class RevealViewController: SWRevealViewController, SWRevealViewControllerDelegate, UIGestureRecognizerDelegate {
     
     var width = UIScreen.mainScreen().bounds.size.width
     let ratio: CGFloat = 0.33
-    var menuWidth: CGFloat?
+    public var menuWidth: CGFloat?
     var menuIsOpen: Bool = false
     var rightMenuIsOpen: Bool = false
     
-    var rightWidth: CGFloat? // Size of right view when menu is open
+    public var rightWidth: CGFloat? // Size of right view when menu is open
     
     var tapRecognizer: UITapGestureRecognizer?
     
     var coverView: UIView?
     
-    override func viewDidLoad() {
+    override public func viewDidLoad() {
         super.viewDidLoad()
         
         // Size of right view when menu is open
@@ -58,11 +58,11 @@ class RevealViewController: SWRevealViewController, SWRevealViewControllerDelega
         coverView?.addGestureRecognizer(tapRecognizer!)
     }
     
-    override func didReceiveMemoryWarning() {
+    override public func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
     
-    override func viewWillTransitionToSize(size: CGSize, withTransitionCoordinator coordinator: UIViewControllerTransitionCoordinator) {
+    override public func viewWillTransitionToSize(size: CGSize, withTransitionCoordinator coordinator: UIViewControllerTransitionCoordinator) {
         width = size.width
         self.rightViewRevealWidth = rightWidth!
         self.rightViewRevealOverdraw = width - rightWidth!
@@ -97,7 +97,7 @@ class RevealViewController: SWRevealViewController, SWRevealViewControllerDelega
         }
     }
     
-    func showRight() {
+    public func showRight() {
         var frame = self.rightViewController.view.frame
         frame.origin.x = 0
         
@@ -110,7 +110,7 @@ class RevealViewController: SWRevealViewController, SWRevealViewControllerDelega
         }
     }
     
-    func reveal(sender: AnyObject?) {
+    public func reveal(sender: AnyObject?) {
         if self.frontViewPosition == .LeftSide {
             closeMenu(true)
         }
@@ -157,7 +157,7 @@ class RevealViewController: SWRevealViewController, SWRevealViewControllerDelega
     
     //MARK: - UIGestureRecognizer delegate
     
-    func gestureRecognizerShouldBegin(gestureRecognizer: UIGestureRecognizer) -> Bool {
+    public func gestureRecognizerShouldBegin(gestureRecognizer: UIGestureRecognizer) -> Bool {
         if gestureRecognizer == tapRecognizer {
             return true
         }
@@ -172,7 +172,7 @@ class RevealViewController: SWRevealViewController, SWRevealViewControllerDelega
     
     //MARK: - SWRevealViewControllerDelegate
     
-    func revealController(revealController: SWRevealViewController!, willMoveToPosition position: FrontViewPosition) {
+    public func revealController(revealController: SWRevealViewController!, willMoveToPosition position: FrontViewPosition) {
         print("willmove")
         if position == .LeftSide && rightMenuIsOpen {
             
@@ -181,6 +181,6 @@ class RevealViewController: SWRevealViewController, SWRevealViewControllerDelega
         }
     }
     
-    func revealController(revealController: SWRevealViewController!, didMoveToPosition position: FrontViewPosition) {
+    public func revealController(revealController: SWRevealViewController!, didMoveToPosition position: FrontViewPosition) {
     }
 }

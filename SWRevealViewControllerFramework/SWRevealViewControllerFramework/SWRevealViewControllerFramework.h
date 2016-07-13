@@ -17,4 +17,4 @@ FOUNDATION_EXPORT const unsigned char SWRevealViewControllerFrameworkVersionStri
 // In this header, you should import all the public headers of your framework using statements like #import <SWRevealViewControllerFramework/PublicHeader.h>
 
 #import <SWRevealViewControllerFramework/SWRevealViewController.h>
-#import "SWRevealViewControllerFramework-Swift.h"
+
