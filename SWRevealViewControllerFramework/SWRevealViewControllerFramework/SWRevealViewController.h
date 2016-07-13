@@ -150,24 +150,22 @@ typedef NS_ENUM( NSInteger, FrontViewPosition)
     /** Front controller is removed from view. Animated transitioning from this state will cause the same effect than animating from FrontViewPositionLeftSideMost. Use this instead of FrontViewPositionLeftSideMost when you want to remove the front view controller view from the view hierarchy. */
     FrontViewPositionLeftSideMostRemoved,
     
-    // Left most position, front view is presented left-offseted by rightViewRevealWidth+rigthViewRevealOverdraw
+    /** Left most position, front view is presented left-offseted by rightViewRevealWidth+rigthViewRevealOverdraw */
     FrontViewPositionLeftSideMost,
     
-    // Left position, front view is presented left-offseted by rightViewRevealWidth
+    /** Left position, front view is presented left-offseted by rightViewRevealWidth */
     FrontViewPositionLeftSide,
 
-    // Center position, rear view is hidden behind front controller
+    /** Center position, rear view is hidden behind front controller */
 	FrontViewPositionLeft,
     
-    // Right possition, front view is presented right-offseted by rearViewRevealWidth
+    /** Right possition, front view is presented right-offseted by rearViewRevealWidth*/
 	FrontViewPositionRight,
     
-    // Right most possition, front view is presented right-offseted by rearViewRevealWidth+rearViewRevealOverdraw
+    /** Right most possition, front view is presented right-offseted by rearViewRevealWidth+rearViewRevealOverdraw */
 	FrontViewPositionRightMost,
     
-    // Front controller is removed from view. Animated transitioning from this state will cause the same
-    // effect than animating from FrontViewPositionRightMost. Use this instead of FrontViewPositionRightMost when
-    // you intent to remove the front controller view from the view hierarchy.
+    /** Front controller is removed from view. Animated transitioning from this state will cause the same effect than animating from FrontViewPositionRightMost. Use this instead of FrontViewPositionRightMost when you intent to remove the front controller view from the view hierarchy.*/
     FrontViewPositionRightMostRemoved,
     
 };

@@ -10,6 +10,7 @@
 		507465561D34FDBF0077C599 /* SWRevealViewControllerFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = 507465551D34FDBF0077C599 /* SWRevealViewControllerFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5074655F1D34FDEB0077C599 /* SWRevealViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 5074655D1D34FDEB0077C599 /* SWRevealViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		507465601D34FDEB0077C599 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5074655E1D34FDEB0077C599 /* SWRevealViewController.m */; };
+		50D020171D3663FD00E420C0 /* RevealViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D020161D3663FD00E420C0 /* RevealViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -18,6 +19,7 @@
 		507465571D34FDBF0077C599 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5074655D1D34FDEB0077C599 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		5074655E1D34FDEB0077C599 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		50D020161D3663FD00E420C0 /* RevealViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RevealViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 				5074655D1D34FDEB0077C599 /* SWRevealViewController.h */,
 				5074655E1D34FDEB0077C599 /* SWRevealViewController.m */,
 				507465551D34FDBF0077C599 /* SWRevealViewControllerFramework.h */,
+				50D020161D3663FD00E420C0 /* RevealViewController.swift */,
 				507465571D34FDBF0077C599 /* Info.plist */,
 			);
 			path = SWRevealViewControllerFramework;
@@ -138,6 +141,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				507465601D34FDEB0077C599 /* SWRevealViewController.m in Sources */,
+				50D020171D3663FD00E420C0 /* RevealViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -238,6 +242,7 @@
 		5074655B1D34FDBF0077C599 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -248,12 +253,14 @@
 				PRODUCT_BUNDLE_IDENTIFIER = de.tsn.SWRevealViewControllerFramework;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		5074655C1D34FDBF0077C599 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -286,6 +293,7 @@
 				5074655C1D34FDBF0077C599 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
