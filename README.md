@@ -2,6 +2,13 @@
 
 A UIViewController subclass for revealing a rear (left and/or right) view controller behind a front controller, inspired by the Facebook app, done right!
 
+## NOTE Add Carthage (thesnown)
+Carthage is supported in Branch "tsn"
+* Add the following line to your Cartfile.
+* `github "thesnown/SWRevealViewController" "tsn"`
+* Close your Cartfile and run:
+* `carthage update`.
+
 
 ## NOTE ( Version 2.3)
 
